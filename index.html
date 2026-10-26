@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Películas y series ilimitadas y mucho más.">
+    <title>Netflix Costa Rica</title>
+    <link rel="stylesheet" href="./css/index.css">
+</head>
+
+<body>
+    <header class="site-header">
+        <a class="brand" href="./Index.html" aria-label="Netflix">
+            <img src="./source/AAAAAVIENVPMEM3Kn4hVzJseX4N8xPjtBDIpwuFDucWksdxQZ8Ss6Xf8U_vt7ThYYfRmzq0x1CS3nOwTGyVrgADvwfB_tPiK_liS2RjvI40RJSzbKRk-o8b3nCxHfCCnBsyB2XBB9_vRoSmN.svg"
+                alt="Netflix">
+        </a>
+        <nav class="header-actions" aria-label="Navegación principal">
+            <label class="language-picker" for="language">
+                <span class="sr-only">Selecciona el idioma</span>
+                <select id="language" name="language">
+                    <option value="es-CR">Español</option>
+                    <option value="en-CR">English</option>
+                </select>
+            </label>
+            <a class="button button-small" href="./confirmarCorreo.html">Iniciar sesión</a>
+        </nav>
+    </header>
+
+    <main>
+        <section class="hero">
+            <div class="hero-background" aria-hidden="true"></div>
+            <div class="hero-content">
+                <h1>Películas y series ilimitadas y mucho más</h1>
+                <p class="hero-subtitle">A partir de USD&nbsp;9,99. Cancela cuando quieras.</p>
+                <form class="signup-form" action="./confirmarCorreo.html" method="get">
+                    <h2>¿Quieres ver Netflix ya? Ingresa tu email para crear una cuenta o reiniciar tu membresía de
+                        Netflix.</h2>
+                    <div class="form-row">
+                        <label class="sr-only" for="email">Email</label>
+                        <input id="email" name="email" type="email" autocomplete="email" placeholder="Email"
+                            required>
+                        <button class="button button-large" type="submit">Comenzar <span aria-hidden="true">›</span></button>
+                    </div>
+                </form>
+            </div>
+        </section>
+
+        <section class="feature feature-dark">
+            <div class="feature-content">
+                <h2>Disfruta en tu TV</h2>
+                <p>Ve en smart TV, PlayStation, Xbox, Chromecast, Apple TV, reproductores de Blu-ray y más.</p>
+            </div>
+            <div class="device-art tv-art" aria-hidden="true">
+                <div class="screen"></div>
+                <div class="stand"></div>
+            </div>
+        </section>
+
+        <section class="feature feature-dark feature-reverse">
+            <div class="feature-content">
+                <h2>Descarga tus series para verlas offline</h2>
+                <p>Guarda tus títulos favoritos y disfruta Netflix donde quieras.</p>
+            </div>
+            <div class="device-art phone-art" aria-hidden="true">
+                <div class="phone-screen">
+                    <span class="download-icon">↓</span>
+                    <strong>Descargando...</strong>
+                </div>
+            </div>
+        </section>
+
+        <section class="feature feature-dark">
+            <div class="feature-content">
+                <h2>Disfruta donde quieras</h2>
+                <p>Películas y series ilimitadas en tu teléfono, tablet, laptop y TV.</p>
+            </div>
+            <div class="device-art devices-art" aria-hidden="true">
+                <div class="laptop-screen"></div>
+                <div class="tablet-screen"></div>
+            </div>
+        </section>
+
+        <section class="feature feature-dark feature-reverse">
+            <div class="feature-content">
+                <h2>Crea perfiles para niños</h2>
+                <p>Los niños disfrutarán de aventuras con sus personajes favoritos en un espacio creado especialmente
+                    para ellos, sin costo adicional.</p>
+            </div>
+            <div class="kids-art" aria-hidden="true">KIDS</div>
+        </section>
+
+        <section class="faq feature-dark">
+            <h2>Preguntas frecuentes</h2>
+            <div class="faq-list">
+                <details>
+                    <summary>¿Qué es Netflix?</summary>
+                    <p>Netflix es un servicio de streaming que ofrece una gran variedad de películas, series y
+                        documentales.</p>
+                </details>
+                <details>
+                    <summary>¿Cuánto cuesta Netflix?</summary>
+                    <p>Disfruta Netflix en tu teléfono, tablet, Smart TV, laptop o dispositivo de streaming por una
+                        tarifa mensual fija.</p>
+                </details>
+                <details>
+                    <summary>¿Dónde puedo ver Netflix?</summary>
+                    <p>Ve Netflix en cualquier dispositivo conectado a internet que tenga la aplicación de Netflix,
+                        como smart TV, teléfonos, tablets y computadoras.</p>
+                </details>
+                <details>
+                    <summary>¿Cómo cancelo?</summary>
+                    <p>Puedes cancelar tu membresía en cualquier momento desde la sección de cuenta.</p>
+                </details>
+                <details>
+                    <summary>¿Qué puedo ver en Netflix?</summary>
+                    <p>Netflix ofrece películas, series, documentales y contenido original para toda la familia.</p>
+                </details>
+            </div>
+            <form class="signup-form faq-signup" action="./confirmarCorreo.html" method="get">
+                <h3>¿Quieres ver Netflix ya? Ingresa tu email para crear una cuenta o reiniciar tu membresía.</h3>
+                <div class="form-row">
+                    <label class="sr-only" for="faq-email">Email</label>
+                    <input id="faq-email" name="email" type="email" autocomplete="email" placeholder="Email" required>
+                    <button class="button button-large" type="submit">Comenzar <span aria-hidden="true">›</span></button>
+                </div>
+            </form>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <p>¿Preguntas? Llama al <a href="tel:8005425607">800 542 5607</a></p>
+        <div class="footer-links">
+            <a href="https://help.netflix.com/support/412">Preguntas frecuentes</a>
+            <a href="https://help.netflix.com/">Centro de ayuda</a>
+            <a href="./confirmarCorreo.html">Cuenta</a>
+            <a href="https://media.netflix.com/">Prensa</a>
+            <a href="https://jobs.netflix.com/jobs">Empleo</a>
+            <a href="https://help.netflix.com/legal/termsofuse">Términos de uso</a>
+            <a href="https://help.netflix.com/legal/privacy">Privacidad</a>
+            <a href="https://help.netflix.com/contactus">Contáctanos</a>
+        </div>
+        <label class="language-picker footer-language" for="footer-language">
+            <span class="sr-only">Selecciona el idioma</span>
+            <select id="footer-language" name="footer-language">
+                <option value="es-CR">Español</option>
+                <option value="en-CR">English</option>
+            </select>
+        </label>
+        <p class="country">Netflix Costa Rica</p>
+    </footer>
+</body>
+
+</html>

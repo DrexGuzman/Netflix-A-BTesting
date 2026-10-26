@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Selecciona tu plan de Netflix.">
+    <title>Elige tu plan - Netflix</title>
+    <link rel="stylesheet" href="./css/index.css">
+</head>
+
+<body class="choose-plan-page">
+    <header class="choose-plan-header">
+        <a class="brand" href="./Index.html" aria-label="Netflix">
+            <img src="./source/AAAAAVIENVPMEM3Kn4hVzJseX4N8xPjtBDIpwuFDucWksdxQZ8Ss6Xf8U_vt7ThYYfRmzq0x1CS3nOwTGyVrgADvwfB_tPiK_liS2RjvI40RJSzbKRk-o8b3nCxHfCCnBsyB2XBB9_vRoSmN.svg"
+                alt="Netflix">
+        </a>
+        <a class="choose-plan-signout" href="./Index.html">Cerrar sesión</a>
+    </header>
+
+    <main class="choose-plan-main">
+        <p class="choose-plan-step">Paso <strong>2</strong> de <strong>3</strong></p>
+        <h1>Selecciona el plan ideal para ti</h1>
+
+        <form action="./confirmarCorreo.html" method="get">
+            <fieldset class="choose-plan-cards">
+                <legend class="sr-only">Planes disponibles</legend>
+                <div class="choose-plan-card">
+                    <input id="choose-basic" name="plan" value="basic" type="radio">
+                    <label for="choose-basic">
+                        <span class="choose-plan-card-title">
+                            <strong>Básico</strong>
+                            <small>720p</small>
+                            <i class="choose-plan-check" aria-hidden="true">✓</i>
+                        </span>
+                        <span class="choose-plan-features">
+                            <span><b>Precio mensual</b><strong>9,99&nbsp;US$</strong></span>
+                            <span><b>Calidad de vídeo y audio</b><strong>Buena</strong></span>
+                            <span><b>Resolución</b><strong>720p (HD)</strong></span>
+                            <span><b>Dispositivos compatibles</b><strong>Televisor, ordenador, teléfono móvil,
+                                    tableta</strong></span>
+                            <span><b>Dispositivos del hogar en los que puede verse Netflix a la vez</b><strong>1</strong></span>
+                            <span><b>Descargas en dispositivos</b><strong>1</strong></span>
+                        </span>
+                    </label>
+                </div>
+
+                <div class="choose-plan-card">
+                    <input id="choose-standard" name="plan" value="standard" type="radio">
+                    <label for="choose-standard">
+                        <span class="choose-plan-card-title">
+                            <strong>Estándar</strong>
+                            <small>1080p</small>
+                            <i class="choose-plan-check" aria-hidden="true">✓</i>
+                        </span>
+                        <span class="choose-plan-features">
+                            <span><b>Precio mensual</b><strong>14,99&nbsp;US$</strong></span>
+                            <span><b>Calidad de vídeo y audio</b><strong>Excelente</strong></span>
+                            <span><b>Resolución</b><strong>1080p (Full HD)</strong></span>
+                            <span><b>Dispositivos compatibles</b><strong>Televisor, ordenador, teléfono móvil,
+                                    tableta</strong></span>
+                            <span><b>Dispositivos del hogar en los que puede verse Netflix a la vez</b><strong>2</strong></span>
+                            <span><b>Descargas en dispositivos</b><strong>2</strong></span>
+                        </span>
+                    </label>
+                </div>
+
+                <div class="choose-plan-card choose-plan-popular">
+                    <input id="choose-premium" name="plan" value="premium" type="radio" checked>
+                    <label for="choose-premium">
+                        <span class="choose-plan-popular-label">Más populares</span>
+                        <span class="choose-plan-card-title">
+                            <strong>Premium</strong>
+                            <small>4K + HDR</small>
+                            <i class="choose-plan-check" aria-hidden="true">✓</i>
+                        </span>
+                        <span class="choose-plan-features">
+                            <span><b>Precio mensual</b><strong>17,99&nbsp;US$</strong></span>
+                            <span><b>Calidad de vídeo y audio</b><strong>Excepcional</strong></span>
+                            <span><b>Resolución</b><strong>4K (Ultra HD) + HDR</strong></span>
+                            <span><b>Audio espacial (audio envolvente)</b><strong>Incluido</strong></span>
+                            <span><b>Dispositivos compatibles</b><strong>Televisor, ordenador, teléfono móvil,
+                                    tableta</strong></span>
+                            <span><b>Dispositivos del hogar en los que puede verse Netflix a la vez</b><strong>4</strong></span>
+                            <span><b>Descargas en dispositivos</b><strong>6</strong></span>
+                        </span>
+                    </label>
+                </div>
+            </fieldset>
+
+            <div class="choose-plan-notes">
+                <p>La disponibilidad del contenido en HD (720p), Full HD (1080p), Ultra HD (4K) y HDR depende de la
+                    capacidad de tu servicio de internet y del dispositivo. Hay contenidos que no están disponibles en
+                    todas las resoluciones. Consulta nuestros <a href="https://help.netflix.com/legal/termsofuse">Términos
+                        de uso</a> para obtener más información.</p>
+                <p>Solo pueden usar tu cuenta las personas que viven contigo. Puedes ver Netflix en 4 dispositivos
+                    distintos al mismo tiempo con el plan Premium, en 2 con el plan Estándar y en 1 con el plan Básico.
+                </p>
+                <p>Los eventos en directo se incluyen en todos los planes de Netflix y contienen anuncios.</p>
+            </div>
+
+            <button class="button choose-plan-submit" type="submit">Siguiente</button>
+        </form>
+    </main>
+
+    <footer class="choose-plan-footer">
+        <p>¿Alguna pregunta? Llama al <a href="tel:8005425607">800 542 5607</a> (gratis)</p>
+        <nav class="choose-plan-footer-links" aria-label="Enlaces legales">
+            <a href="https://help.netflix.com/support/412">Preguntas frecuentes</a>
+            <a href="https://help.netflix.com/">Centro de ayuda</a>
+            <a href="https://help.netflix.com/legal/termsofuse">Términos de uso</a>
+            <a href="https://help.netflix.com/legal/privacy">Privacidad</a>
+            <a href="./Index.html">Preferencias de cookies</a>
+            <a href="https://help.netflix.com/legal/corpinfo">Información corporativa</a>
+        </nav>
+        <label class="language-picker choose-plan-language" for="choose-plan-language">
+            <span class="sr-only">Elegir idioma</span>
+            <select id="choose-plan-language" name="language">
+                <option value="es-CR">Español</option>
+                <option value="en-CR">English</option>
+            </select>
+        </label>
+    </footer>
+</body>
+
+</html>
