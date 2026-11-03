@@ -11,9 +11,8 @@
 
 <body>
     <header class="site-header">
-        <a class="brand" href="./Index.html" aria-label="Netflix">
-            <img src="./source/AAAAAVIENVPMEM3Kn4hVzJseX4N8xPjtBDIpwuFDucWksdxQZ8Ss6Xf8U_vt7ThYYfRmzq0x1CS3nOwTGyVrgADvwfB_tPiK_liS2RjvI40RJSzbKRk-o8b3nCxHfCCnBsyB2XBB9_vRoSmN.svg"
-                alt="Netflix">
+        <a class="brand" href="./index.html" aria-label="Netflix">
+            <img src="./source/netflixLogo.svg" alt="Netflix">
         </a>
         <nav class="header-actions" aria-label="Navegación principal">
             <label class="language-picker" for="language">
@@ -23,11 +22,13 @@
                     <option value="en-CR">English</option>
                 </select>
             </label>
-            <a class="button button-small" href="./confirmarCorreo.html">Iniciar sesión</a>
+            <a class="button button-small" href="./login.html">Iniciar sesión</a>
         </nav>
     </header>
 
-    <main>
+    <main id="experiment-content" aria-live="polite"></main>
+
+    <template id="variant-a">
         <section class="hero">
             <div class="hero-background" aria-hidden="true"></div>
             <div class="hero-content">
@@ -37,15 +38,14 @@
                     <h2>¿Quieres ver Netflix ya? Ingresa tu email para crear una cuenta o reiniciar tu membresía de
                         Netflix.</h2>
                     <div class="form-row">
-                        <label class="sr-only" for="email">Email</label>
-                        <input id="email" name="email" type="email" autocomplete="email" placeholder="Email"
+                        <label class="sr-only" for="email-a">Email</label>
+                        <input id="email-a" name="email" type="email" autocomplete="email" placeholder="Email"
                             required>
                         <button class="button button-large" type="submit">Comenzar <span aria-hidden="true">›</span></button>
                     </div>
                 </form>
             </div>
         </section>
-
         <section class="feature feature-dark">
             <div class="feature-content">
                 <h2>Disfruta en tu TV</h2>
@@ -56,7 +56,6 @@
                 <div class="stand"></div>
             </div>
         </section>
-
         <section class="feature feature-dark feature-reverse">
             <div class="feature-content">
                 <h2>Descarga tus series para verlas offline</h2>
@@ -69,7 +68,6 @@
                 </div>
             </div>
         </section>
-
         <section class="feature feature-dark">
             <div class="feature-content">
                 <h2>Disfruta donde quieras</h2>
@@ -80,7 +78,6 @@
                 <div class="tablet-screen"></div>
             </div>
         </section>
-
         <section class="feature feature-dark feature-reverse">
             <div class="feature-content">
                 <h2>Crea perfiles para niños</h2>
@@ -89,51 +86,106 @@
             </div>
             <div class="kids-art" aria-hidden="true">KIDS</div>
         </section>
-
         <section class="faq feature-dark">
             <h2>Preguntas frecuentes</h2>
             <div class="faq-list">
-                <details>
-                    <summary>¿Qué es Netflix?</summary>
-                    <p>Netflix es un servicio de streaming que ofrece una gran variedad de películas, series y
-                        documentales.</p>
-                </details>
-                <details>
-                    <summary>¿Cuánto cuesta Netflix?</summary>
-                    <p>Disfruta Netflix en tu teléfono, tablet, Smart TV, laptop o dispositivo de streaming por una
-                        tarifa mensual fija.</p>
-                </details>
-                <details>
-                    <summary>¿Dónde puedo ver Netflix?</summary>
-                    <p>Ve Netflix en cualquier dispositivo conectado a internet que tenga la aplicación de Netflix,
-                        como smart TV, teléfonos, tablets y computadoras.</p>
-                </details>
-                <details>
-                    <summary>¿Cómo cancelo?</summary>
-                    <p>Puedes cancelar tu membresía en cualquier momento desde la sección de cuenta.</p>
-                </details>
-                <details>
-                    <summary>¿Qué puedo ver en Netflix?</summary>
-                    <p>Netflix ofrece películas, series, documentales y contenido original para toda la familia.</p>
-                </details>
+                <details><summary>¿Qué es Netflix?</summary><p>Netflix es un servicio de streaming que ofrece una gran variedad de películas, series y documentales.</p></details>
+                <details><summary>¿Cuánto cuesta Netflix?</summary><p>Disfruta Netflix en tu teléfono, tablet, Smart TV, laptop o dispositivo de streaming por una tarifa mensual fija.</p></details>
+                <details><summary>¿Dónde puedo ver Netflix?</summary><p>Ve Netflix en cualquier dispositivo conectado a internet que tenga la aplicación de Netflix, como smart TV, teléfonos, tablets y computadoras.</p></details>
+                <details><summary>¿Cómo cancelo?</summary><p>Puedes cancelar tu membresía en cualquier momento desde la sección de cuenta.</p></details>
+                <details><summary>¿Qué puedo ver en Netflix?</summary><p>Netflix ofrece películas, series, documentales y contenido original para toda la familia.</p></details>
             </div>
             <form class="signup-form faq-signup" action="./confirmarCorreo.html" method="get">
                 <h3>¿Quieres ver Netflix ya? Ingresa tu email para crear una cuenta o reiniciar tu membresía.</h3>
                 <div class="form-row">
-                    <label class="sr-only" for="faq-email">Email</label>
-                    <input id="faq-email" name="email" type="email" autocomplete="email" placeholder="Email" required>
+                    <label class="sr-only" for="faq-email-a">Email</label>
+                    <input id="faq-email-a" name="email" type="email" autocomplete="email" placeholder="Email" required>
                     <button class="button button-large" type="submit">Comenzar <span aria-hidden="true">›</span></button>
                 </div>
             </form>
         </section>
-    </main>
+    </template>
+
+    <template id="variant-b">
+        <section class="hero">
+            <div class="hero-background" aria-hidden="true"></div>
+            <div class="hero-content">
+                <h1>Películas y series ilimitadas y mucho más</h1>
+                <p class="hero-subtitle">A partir de USD&nbsp;9,99. Cancela cuando quieras.</p>
+                <form class="signup-form" action="./confirmarCorreo.html" method="get">
+                    <h2>¿Quieres ver Netflix ya? Ingresa tu email para crear una cuenta o reiniciar tu membresía de
+                        Netflix.</h2>
+                    <div class="form-row">
+                        <label class="sr-only" for="email-b">Email</label>
+                        <input id="email-b" name="email" type="email" autocomplete="email" placeholder="Email"
+                            required>
+                        <button class="button button-large" type="submit">Comenzar <span aria-hidden="true">›</span></button>
+                    </div>
+                </form>
+            </div>
+        </section>
+        <section class="plan-comparison" aria-labelledby="plan-comparison-title">
+            <div class="plan-comparison-heading">
+                <h2 id="plan-comparison-title">¿Qué plan vas a elegir?</h2>
+                <p>Elige el plan ideal para disfrutar Netflix en tus dispositivos favoritos.</p>
+            </div>
+            <div class="comparison-table-wrap">
+                <table class="comparison-table">
+                    <caption class="sr-only">Comparación de planes disponibles</caption>
+                    <thead>
+                        <tr>
+                            <th scope="col">Características</th>
+                            <th scope="col"><span class="comparison-plan-name comparison-basic">BÁSICO</span><span class="comparison-price">USD 9,99/mes</span><a class="comparison-link" href="./eligePlan.html">Elegir plan</a></th>
+                            <th scope="col"><span class="comparison-plan-name comparison-standard">ESTÁNDAR</span><span class="comparison-price">USD 14,99/mes</span><a class="comparison-link" href="./eligePlan.html">Elegir plan</a></th>
+                            <th scope="col"><span class="comparison-plan-name comparison-premium">PREMIUM</span><span class="comparison-price">USD 17,99/mes</span><a class="comparison-link" href="./eligePlan.html">Elegir plan</a></th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr><th scope="row">Calidad de vídeo y audio</th><td>Buena</td><td>Excelente</td><td>Excepcional</td></tr>
+                        <tr><th scope="row">Resolución</th><td>720p (HD)</td><td>1080p (Full HD)</td><td>4K (Ultra HD) + HDR</td></tr>
+                        <tr><th scope="row">Audio espacial</th><td><span class="comparison-dash" aria-label="No incluido">—</span></td><td><span class="comparison-dash" aria-label="No incluido">—</span></td><td><span class="comparison-check" aria-label="Incluido">✓</span></td></tr>
+                        <tr><th scope="row">Dispositivos compatibles</th><td>Televisor, ordenador, teléfono móvil y tableta</td><td>Televisor, ordenador, teléfono móvil y tableta</td><td>Televisor, ordenador, teléfono móvil y tableta</td></tr>
+                        <tr><th scope="row">Dispositivos del hogar a la vez</th><td>1</td><td>2</td><td>4</td></tr>
+                        <tr><th scope="row">Descargas en dispositivos</th><td>1</td><td>2</td><td>6</td></tr>
+                    </tbody>
+                </table>
+            </div>
+            <p class="comparison-note">La disponibilidad de HD, Full HD, Ultra HD (4K) y HDR depende de tu servicio de internet y del dispositivo. El contenido puede variar según el plan.</p>
+        </section>
+        <section class="feature feature-dark">
+            <div class="feature-content"><h2>Disfruta en tu TV</h2><p>Ve en smart TV, PlayStation, Xbox, Chromecast, Apple TV, reproductores de Blu-ray y más.</p></div>
+            <div class="device-art tv-art" aria-hidden="true"><div class="screen"></div><div class="stand"></div></div>
+        </section>
+        <section class="feature feature-dark feature-reverse">
+            <div class="feature-content"><h2>Descarga tus series para verlas offline</h2><p>Guarda tus títulos favoritos y disfruta Netflix donde quieras.</p></div>
+            <div class="device-art phone-art" aria-hidden="true"><div class="phone-screen"><span class="download-icon">↓</span><strong>Descargando...</strong></div></div>
+        </section>
+        <section class="feature feature-dark feature-reverse">
+            <div class="feature-content"><h2>Crea perfiles para niños</h2><p>Los niños disfrutarán de aventuras con sus personajes favoritos en un espacio creado especialmente para ellos, sin costo adicional.</p></div>
+            <div class="kids-art" aria-hidden="true">KIDS</div>
+        </section>
+        <section class="faq feature-dark">
+            <h2>Preguntas frecuentes</h2>
+            <div class="faq-list">
+                <details><summary>¿Qué es Netflix?</summary><p>Netflix es un servicio de streaming que ofrece una gran variedad de películas, series y documentales.</p></details>
+                <details><summary>¿Cuánto cuesta Netflix?</summary><p>Disfruta Netflix en tu teléfono, tablet, Smart TV, laptop o dispositivo de streaming por una tarifa mensual fija.</p></details>
+                <details><summary>¿Dónde puedo ver Netflix?</summary><p>Ve Netflix en cualquier dispositivo conectado a internet que tenga la aplicación de Netflix, como smart TV, teléfonos, tablets y computadoras.</p></details>
+                <details><summary>¿Cómo cancelo?</summary><p>Puedes cancelar tu membresía en cualquier momento desde la sección de cuenta.</p></details>
+                <details><summary>¿Qué puedo ver en Netflix?</summary><p>Netflix ofrece películas, series, documentales y contenido original para toda la familia.</p></details>
+            </div>
+            <form class="signup-form faq-signup" action="./confirmarCorreo.html" method="get">
+                <h3>¿Quieres ver Netflix ya? Ingresa tu email para crear una cuenta o reiniciar tu membresía.</h3>
+                <div class="form-row"><label class="sr-only" for="faq-email-b">Email</label><input id="faq-email-b" name="email" type="email" autocomplete="email" placeholder="Email" required><button class="button button-large" type="submit">Comenzar <span aria-hidden="true">›</span></button></div>
+            </form>
+        </section>
+    </template>
 
     <footer class="site-footer">
         <p>¿Preguntas? Llama al <a href="tel:8005425607">800 542 5607</a></p>
         <div class="footer-links">
             <a href="https://help.netflix.com/support/412">Preguntas frecuentes</a>
             <a href="https://help.netflix.com/">Centro de ayuda</a>
-            <a href="./confirmarCorreo.html">Cuenta</a>
+            <a href="./login.html">Cuenta</a>
             <a href="https://media.netflix.com/">Prensa</a>
             <a href="https://jobs.netflix.com/jobs">Empleo</a>
             <a href="https://help.netflix.com/legal/termsofuse">Términos de uso</a>
@@ -149,6 +201,9 @@
         </label>
         <p class="country">Netflix Costa Rica</p>
     </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/@growthbook/growthbook/dist/bundles/index.js"></script>
+    <script src="./js/growthbook.js"></script>
 </body>
 
 </html>
