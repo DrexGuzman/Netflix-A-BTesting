@@ -7,9 +7,35 @@
     <meta name="description" content="Películas y series ilimitadas y mucho más.">
     <title>Netflix Costa Rica</title>
     <link rel="stylesheet" href="./css/index.css">
+    <style>
+        html:not([data-gb-ready]) #experiment-content {
+            visibility: hidden;
+        }
+    </style>
+    <noscript>
+        <style>
+            html:not([data-gb-ready]) #experiment-content {
+                visibility: visible;
+            }
+        </style>
+    </noscript>
+    <script>
+        window.setTimeout(function () {
+            if (document.documentElement.hasAttribute("data-gb-ready")) {
+                return;
+            }
+            var content = document.querySelector("#experiment-content");
+            var fallback = document.querySelector("#variant-a");
+            if (content && fallback && !content.querySelector(":scope > section.hero")) {
+                content.appendChild(fallback.content.cloneNode(true));
+            }
+            document.documentElement.setAttribute("data-gb-ready", "");
+        }, 3000);
+    </script>
+    <script type="module" src="./js/growthbook.js"></script>
 </head>
 
-<body>
+<body data-gb-page="landing">
     <header class="site-header">
         <a class="brand" href="./index.html" aria-label="Netflix">
             <img src="./source/netflixLogo.svg" alt="Netflix">
@@ -22,11 +48,22 @@
                     <option value="en-CR">English</option>
                 </select>
             </label>
-            <a class="button button-small" href="./login.html">Iniciar sesión</a>
+            <a class="button button-small" href="./login.html"
+                data-gb-event="login_click" data-gb-location="header">Iniciar sesión</a>
         </nav>
     </header>
 
-    <main id="experiment-content" aria-live="polite"></main>
+    <main id="experiment-content" aria-live="polite">
+        <noscript>
+            <section class="hero">
+                <div class="hero-background" aria-hidden="true"></div>
+                <div class="hero-content">
+                    <h1>Películas y series ilimitadas y mucho más</h1>
+                    <p class="hero-subtitle">Activa JavaScript para completar tu suscripción.</p>
+                </div>
+            </section>
+        </noscript>
+    </main>
 
     <template id="variant-a">
         <section class="hero">
@@ -34,12 +71,13 @@
             <div class="hero-content">
                 <h1>Películas y series ilimitadas y mucho más</h1>
                 <p class="hero-subtitle">A partir de USD&nbsp;9,99. Cancela cuando quieras.</p>
-                <form class="signup-form" action="./confirmarCorreo.html" method="get">
+                <form class="signup-form" action="./confirmarCorreo.html" method="get"
+                    data-gb-event="email_submit" data-gb-location="hero">
                     <h2>¿Quieres ver Netflix ya? Ingresa tu email para crear una cuenta o reiniciar tu membresía de
                         Netflix.</h2>
                     <div class="form-row">
                         <label class="sr-only" for="email-a">Email</label>
-                        <input id="email-a" name="email" type="email" autocomplete="email" placeholder="Email"
+                        <input id="email-a" type="email" autocomplete="email" placeholder="Email"
                             required>
                         <button class="button button-large" type="submit">Comenzar <span aria-hidden="true">›</span></button>
                     </div>
@@ -95,11 +133,12 @@
                 <details><summary>¿Cómo cancelo?</summary><p>Puedes cancelar tu membresía en cualquier momento desde la sección de cuenta.</p></details>
                 <details><summary>¿Qué puedo ver en Netflix?</summary><p>Netflix ofrece películas, series, documentales y contenido original para toda la familia.</p></details>
             </div>
-            <form class="signup-form faq-signup" action="./confirmarCorreo.html" method="get">
+            <form class="signup-form faq-signup" action="./confirmarCorreo.html" method="get"
+                data-gb-event="email_submit" data-gb-location="faq">
                 <h3>¿Quieres ver Netflix ya? Ingresa tu email para crear una cuenta o reiniciar tu membresía.</h3>
                 <div class="form-row">
                     <label class="sr-only" for="faq-email-a">Email</label>
-                    <input id="faq-email-a" name="email" type="email" autocomplete="email" placeholder="Email" required>
+                    <input id="faq-email-a" type="email" autocomplete="email" placeholder="Email" required>
                     <button class="button button-large" type="submit">Comenzar <span aria-hidden="true">›</span></button>
                 </div>
             </form>
@@ -112,12 +151,13 @@
             <div class="hero-content">
                 <h1>Películas y series ilimitadas y mucho más</h1>
                 <p class="hero-subtitle">A partir de USD&nbsp;9,99. Cancela cuando quieras.</p>
-                <form class="signup-form" action="./confirmarCorreo.html" method="get">
+                <form class="signup-form" action="./confirmarCorreo.html" method="get"
+                    data-gb-event="email_submit" data-gb-location="hero">
                     <h2>¿Quieres ver Netflix ya? Ingresa tu email para crear una cuenta o reiniciar tu membresía de
                         Netflix.</h2>
                     <div class="form-row">
                         <label class="sr-only" for="email-b">Email</label>
-                        <input id="email-b" name="email" type="email" autocomplete="email" placeholder="Email"
+                        <input id="email-b" type="email" autocomplete="email" placeholder="Email"
                             required>
                         <button class="button button-large" type="submit">Comenzar <span aria-hidden="true">›</span></button>
                     </div>
@@ -135,9 +175,12 @@
                     <thead>
                         <tr>
                             <th scope="col">Características</th>
-                            <th scope="col"><span class="comparison-plan-name comparison-basic">BÁSICO</span><span class="comparison-price">USD 9,99/mes</span><a class="comparison-link" href="./eligePlan.html">Elegir plan</a></th>
-                            <th scope="col"><span class="comparison-plan-name comparison-standard">ESTÁNDAR</span><span class="comparison-price">USD 14,99/mes</span><a class="comparison-link" href="./eligePlan.html">Elegir plan</a></th>
-                            <th scope="col"><span class="comparison-plan-name comparison-premium">PREMIUM</span><span class="comparison-price">USD 17,99/mes</span><a class="comparison-link" href="./eligePlan.html">Elegir plan</a></th>
+                            <th scope="col"><span class="comparison-plan-name comparison-basic">BÁSICO</span><span class="comparison-price">USD 9,99/mes</span><a class="comparison-link" href="./eligePlan.html"
+                                    data-gb-event="plan_interest" data-gb-plan="basic">Elegir plan</a></th>
+                            <th scope="col"><span class="comparison-plan-name comparison-standard">ESTÁNDAR</span><span class="comparison-price">USD 14,99/mes</span><a class="comparison-link" href="./eligePlan.html"
+                                    data-gb-event="plan_interest" data-gb-plan="standard">Elegir plan</a></th>
+                            <th scope="col"><span class="comparison-plan-name comparison-premium">PREMIUM</span><span class="comparison-price">USD 17,99/mes</span><a class="comparison-link" href="./eligePlan.html"
+                                    data-gb-event="plan_interest" data-gb-plan="premium">Elegir plan</a></th>
                         </tr>
                     </thead>
                     <tbody>
@@ -173,9 +216,10 @@
                 <details><summary>¿Cómo cancelo?</summary><p>Puedes cancelar tu membresía en cualquier momento desde la sección de cuenta.</p></details>
                 <details><summary>¿Qué puedo ver en Netflix?</summary><p>Netflix ofrece películas, series, documentales y contenido original para toda la familia.</p></details>
             </div>
-            <form class="signup-form faq-signup" action="./confirmarCorreo.html" method="get">
+            <form class="signup-form faq-signup" action="./confirmarCorreo.html" method="get"
+                data-gb-event="email_submit" data-gb-location="faq">
                 <h3>¿Quieres ver Netflix ya? Ingresa tu email para crear una cuenta o reiniciar tu membresía.</h3>
-                <div class="form-row"><label class="sr-only" for="faq-email-b">Email</label><input id="faq-email-b" name="email" type="email" autocomplete="email" placeholder="Email" required><button class="button button-large" type="submit">Comenzar <span aria-hidden="true">›</span></button></div>
+                <div class="form-row"><label class="sr-only" for="faq-email-b">Email</label><input id="faq-email-b" type="email" autocomplete="email" placeholder="Email" required><button class="button button-large" type="submit">Comenzar <span aria-hidden="true">›</span></button></div>
             </form>
         </section>
     </template>
@@ -185,7 +229,7 @@
         <div class="footer-links">
             <a href="https://help.netflix.com/support/412">Preguntas frecuentes</a>
             <a href="https://help.netflix.com/">Centro de ayuda</a>
-            <a href="./login.html">Cuenta</a>
+            <a href="./login.html" data-gb-event="login_click" data-gb-location="footer">Cuenta</a>
             <a href="https://media.netflix.com/">Prensa</a>
             <a href="https://jobs.netflix.com/jobs">Empleo</a>
             <a href="https://help.netflix.com/legal/termsofuse">Términos de uso</a>
@@ -202,7 +246,6 @@
         <p class="country">Netflix Costa Rica</p>
     </footer>
 
-    <script type="module" src="./js/growthbook.js"></script>
 </body>
 
 </html>

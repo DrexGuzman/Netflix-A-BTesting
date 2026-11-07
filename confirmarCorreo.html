@@ -7,11 +7,12 @@
     <meta name="description" content="Confirma tu correo para completar tu suscripción de Netflix.">
     <title>Confirma tu correo - Netflix</title>
     <link rel="stylesheet" href="./css/index.css">
+    <script type="module" src="./js/growthbook.js"></script>
 </head>
 
-<body class="confirmation-page">
+<body class="confirmation-page" data-gb-page="email">
     <header class="confirmation-header">
-        <a class="brand" href="./Index.html" aria-label="Volver a Netflix">
+        <a class="brand" href="./index.html" aria-label="Volver a Netflix">
             <img src="./source/netflixLogo.svg"
                 alt="Netflix">
         </a>
@@ -25,8 +26,11 @@
 
             <div class="confirmation-email">
                 <span>correo@gmail.com</span>
-                <a href="./Index.html">Cambiar</a>
+                <a href="./index.html" data-gb-event="email_change_click">Cambiar</a>
             </div>
+
+            <a class="button button-large confirmation-continue" href="./completarSus.html"
+                data-gb-event="email_link_click" data-gb-location="confirmation">Abrir enlace de suscripción</a>
 
             <p class="resend-message">
                 ¿No recibiste un enlace? Revisa la carpeta de correo spam o
@@ -52,7 +56,7 @@
             <a href="https://help.netflix.com/">Centro de ayuda</a>
             <a href="https://help.netflix.com/legal/termsofuse">Términos de uso</a>
             <a href="https://help.netflix.com/legal/privacy">Privacidad</a>
-            <a href="./Index.html">Preferencias de cookies</a>
+            <a href="./index.html">Preferencias de cookies</a>
             <a href="https://help.netflix.com/legal/corpinfo">Información empresarial</a>
         </nav>
     </footer>

@@ -7,15 +7,16 @@
     <meta name="description" content="Tu suscripción de Netflix se ha completado correctamente.">
     <title>Suscripción exitosa - Netflix</title>
     <link rel="stylesheet" href="./css/index.css">
+    <script type="module" src="./js/growthbook.js"></script>
 </head>
 
-<body class="success-page">
+<body class="success-page" data-gb-page="success">
     <header class="success-header">
-        <a class="brand" href="./indexB.html" aria-label="Netflix">
+        <a class="brand" href="./index.html" aria-label="Netflix">
             <img src="./source/netflixLogo.svg"
                 alt="Netflix">
         </a>
-        <a class="success-signout" href="./indexB.html">Cerrar sesión</a>
+        <a class="success-signout" href="./index.html">Cerrar sesión</a>
     </header>
 
     <main class="success-main">
@@ -37,8 +38,9 @@
                 </div>
             </div>
 
-            <a class="button success-primary" href="./indexB.html">Comenzar a ver</a>
-            <a class="success-secondary" href="./indexB.html">Volver al inicio</a>
+            <a class="button success-primary" href="./index.html"
+                data-gb-event="watch_click" data-gb-location="success">Comenzar a ver</a>
+            <a class="success-secondary" href="./index.html">Volver al inicio</a>
         </section>
     </main>
 
@@ -49,7 +51,7 @@
             <a href="https://help.netflix.com/">Centro de ayuda</a>
             <a href="https://help.netflix.com/legal/termsofuse">Términos de uso</a>
             <a href="https://help.netflix.com/legal/privacy">Privacidad</a>
-            <a href="./indexB.html">Preferencias de cookies</a>
+            <a href="./index.html">Preferencias de cookies</a>
             <a href="https://help.netflix.com/legal/corpinfo">Información empresarial</a>
         </nav>
     </footer>

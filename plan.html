@@ -7,15 +7,16 @@
     <meta name="description" content="Selecciona el plan ideal para ti.">
     <title>Selecciona tu plan - Netflix</title>
     <link rel="stylesheet" href="./css/index.css">
+    <script type="module" src="./js/growthbook.js"></script>
 </head>
 
-<body class="plan-page">
+<body class="plan-page" data-gb-page="plan">
     <header class="plan-header">
-        <a class="brand" href="./Index.html" aria-label="Netflix">
+        <a class="brand" href="./index.html" aria-label="Netflix">
             <img src="./source/netflixLogo.svg"
                 alt="Netflix">
         </a>
-        <a class="plan-signout" href="./Index.html">Cerrar sesión</a>
+        <a class="plan-signout" href="./index.html">Cerrar sesión</a>
     </header>
 
     <main class="plan-main">
@@ -25,7 +26,8 @@
             <h1>Elige tu plan</h1>
         </div>
 
-        <form class="plan-form" action="./eligePlan.html" method="get">
+        <form class="plan-form" action="./eligePlan.html" method="get"
+            data-gb-event="plan_continue">
             <ul class="plan-benefits">
                 <li>Sin compromisos, cancela cuando quieras.</li>
                 <li>Todo Netflix a buen precio.</li>
@@ -44,7 +46,7 @@
             <a href="https://help.netflix.com/">Centro de ayuda</a>
             <a href="https://help.netflix.com/legal/termsofuse">Términos de uso</a>
             <a href="https://help.netflix.com/legal/privacy">Privacidad</a>
-            <a href="./Index.html">Preferencias de cookies</a>
+            <a href="./index.html">Preferencias de cookies</a>
             <a href="https://help.netflix.com/legal/corpinfo">Información corporativa</a>
         </nav>
     </footer>
