@@ -12,8 +12,7 @@
 <body class="success-page">
     <header class="success-header">
         <a class="brand" href="./indexB.html" aria-label="Netflix">
-            <img src="./source/netflixLogo.svg"
-                alt="Netflix">
+            <img src="./source/netflixLogo.svg" alt="Netflix">
         </a>
         <a class="success-signout" href="./indexB.html">Cerrar sesión</a>
     </header>
@@ -53,6 +52,28 @@
             <a href="https://help.netflix.com/legal/corpinfo">Información empresarial</a>
         </nav>
     </footer>
+
+    <script>
+        const test = JSON.parse(
+            sessionStorage.getItem("ab_test")
+        );
+
+        if (test) {
+
+            const elapsedTime = Date.now() - test.started_at;
+
+            const event = {
+                experiment_id: test.experiment_id,
+                variation: test.variation,
+                visitor_id: test.visitor_id,
+                event_name: "destination_reached",
+                elapsed_time_ms: elapsedTime
+            };
+
+            console.log("Resultado del recorrido:", event);
+
+        }
+    </script>
 </body>
 
 </html>

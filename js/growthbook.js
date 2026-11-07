@@ -39,3 +39,27 @@ try {
     console.error("No se pudo cargar la configuración de GrowthBook.", error);
     renderVariant(fallbackVariant);
 }
+
+function startJourney(variation) {
+    const journey = {
+        experiment_id: "diseno-home",
+        variation: variation,
+        visitor_id: localStorage.getItem("visitor_id"),
+        started_at: Date.now(),
+        journey_id: crypto.randomUUID()
+    };
+
+    sessionStorage.setItem(
+        "ab_test_journey",
+        JSON.stringify(journey)
+    );
+
+    console.log("Recorrido iniciado:", journey);
+}
+
+document.getElementById("app").replaceChildren(
+    template.content.cloneNode(true)
+);
+
+// Registrar inicio del recorrido
+startJourney(result.value);
