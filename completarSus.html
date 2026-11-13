@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Completa tu suscripción de Netflix.">
-    <title>Completar la suscripción - Netflix</title>
+    <title>Completar suscripción - Netflix</title>
     <link rel="stylesheet" href="./css/index.css">
     <script type="module" src="./js/growthbook.js"></script>
 </head>
@@ -34,10 +34,51 @@
             <div class="subscription-hero-content">
                 <h1>Películas y series sin límites y mucho más</h1>
                 <p>A partir de 9,99&nbsp;US$. Cancela cuando quieras.</p>
-                <a class="button button-large" href="./eligePlan.html"
-                    data-gb-event="subscription_start" data-gb-location="hero">Completar la suscripción <span
+                <a class="button button-large" href="./plan.html"
+                    data-gb-event="subscription_start" data-gb-location="hero">Completar suscripción <span
                         aria-hidden="true">›</span></a>
             </div>
+        </section>
+
+        <section class="plan-comparison" id="complete-plan-comparison"
+            aria-labelledby="complete-plan-comparison-title" hidden>
+            <div class="plan-comparison-heading">
+                <h2 id="complete-plan-comparison-title">¿Qué plan vas a elegir?</h2>
+                <p>Elige el plan ideal para disfrutar Netflix en tus dispositivos favoritos.</p>
+            </div>
+            <div class="comparison-table-wrap">
+                <table class="comparison-table">
+                    <caption class="sr-only">Comparación de planes disponibles</caption>
+                    <thead>
+                        <tr>
+                            <th scope="col">Características</th>
+                            <th scope="col"><span class="comparison-plan-name comparison-basic">BÁSICO</span><span
+                                    class="comparison-price">USD 9,99/mes</span><a class="comparison-link"
+                                    href="./iniciarSubscripcion.html?plan=basic" data-gb-event="plan_interest"
+                                    data-gb-plan="basic">Elegir plan</a></th>
+                            <th scope="col"><span
+                                    class="comparison-plan-name comparison-standard">ESTÁNDAR</span><span
+                                    class="comparison-price">USD 14,99/mes</span><a class="comparison-link"
+                                    href="./iniciarSubscripcion.html?plan=standard" data-gb-event="plan_interest"
+                                    data-gb-plan="standard">Elegir plan</a></th>
+                            <th scope="col"><span
+                                    class="comparison-plan-name comparison-premium">PREMIUM</span><span
+                                    class="comparison-price">USD 17,99/mes</span><a class="comparison-link"
+                                    href="./iniciarSubscripcion.html?plan=premium" data-gb-event="plan_interest"
+                                    data-gb-plan="premium">Elegir plan</a></th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr><th scope="row">Calidad de vídeo y audio</th><td>Buena</td><td>Excelente</td><td>Excepcional</td></tr>
+                        <tr><th scope="row">Resolución</th><td>720p (HD)</td><td>1080p (Full HD)</td><td>4K (Ultra HD) + HDR</td></tr>
+                        <tr><th scope="row">Audio espacial</th><td><span class="comparison-dash" aria-label="No incluido">—</span></td><td><span class="comparison-dash" aria-label="No incluido">—</span></td><td><span class="comparison-check" aria-label="Incluido">✓</span></td></tr>
+                        <tr><th scope="row">Dispositivos compatibles</th><td>Televisor, ordenador, teléfono móvil y tableta</td><td>Televisor, ordenador, teléfono móvil y tableta</td><td>Televisor, ordenador, teléfono móvil y tableta</td></tr>
+                        <tr><th scope="row">Dispositivos del hogar a la vez</th><td>1</td><td>2</td><td>4</td></tr>
+                        <tr><th scope="row">Descargas en dispositivos</th><td>1</td><td>2</td><td>6</td></tr>
+                    </tbody>
+                </table>
+            </div>
+            <p class="comparison-note">La disponibilidad de HD, Full HD, Ultra HD (4K) y HDR depende de tu servicio de internet y del dispositivo. El contenido puede variar según el plan.</p>
         </section>
 
         <section class="trending-section">
@@ -56,70 +97,60 @@
             </div>
         </section>
 
-        <section class="benefits-section">
-            <h2>Más motivos para suscribirte</h2>
-            <div class="benefits-grid">
-                <article class="benefit-card">
-                    <h3>Disfruta en tu tele</h3>
-                    <p>Smart TV, PlayStation, Xbox, Chromecast, Apple TV, reproductores Blu-ray y muchos más.</p>
-                    <div class="benefit-icon tv-icon" aria-hidden="true">▣</div>
-                </article>
-                <article class="benefit-card">
-                    <h3>Descárgate tus favoritas para verlas sin conexión</h3>
-                    <p>Guarda tus títulos favoritos fácilmente para que siempre tengas algo para ver.</p>
-                    <div class="benefit-icon download-icon" aria-hidden="true">↓</div>
-                </article>
-                <article class="benefit-card">
-                    <h3>Disfruta en todas partes</h3>
-                    <p>Ve en streaming todas las películas y series en tu móvil, tableta, ordenador y televisor.</p>
-                    <div class="benefit-icon devices-icon" aria-hidden="true">▰</div>
-                </article>
-                <article class="benefit-card">
-                    <h3>Crea perfiles infantiles</h3>
-                    <p>Deja que los niños vivan aventuras con sus personajes favoritos en un espacio diseñado
-                        exclusivamente para ellos.</p>
-                    <div class="benefit-icon kids-icon" aria-hidden="true">★</div>
-                </article>
+        <section class="feature feature-dark">
+            <div class="feature-content">
+                <h2>Disfruta en tu TV</h2>
+                <p>Ve en smart TV, PlayStation, Xbox, Chromecast, Apple TV, reproductores de Blu-ray y más.</p>
+            </div>
+            <div class="device-art tv-art" aria-hidden="true">
+                <div class="screen"></div>
+                <div class="stand"></div>
             </div>
         </section>
+        <section class="feature feature-dark feature-reverse">
+            <div class="feature-content">
+                <h2>Descarga tus series para verlas offline</h2>
+                <p>Guarda tus títulos favoritos y disfruta Netflix donde quieras.</p>
+            </div>
+            <div class="device-art phone-art" aria-hidden="true">
+                <div class="phone-screen">
+                    <span class="download-icon">↓</span>
+                    <strong>Descargando...</strong>
+                </div>
+            </div>
+        </section>
+        <section class="feature feature-dark">
+            <div class="feature-content">
+                <h2>Disfruta donde quieras</h2>
+                <p>Películas y series ilimitadas en tu teléfono, tablet, laptop y TV.</p>
+            </div>
+            <div class="device-art devices-art" aria-hidden="true">
+                <div class="laptop-screen"></div>
+                <div class="tablet-screen"></div>
+            </div>
+        </section>
+        <section class="feature feature-dark feature-reverse">
+            <div class="feature-content">
+                <h2>Crea perfiles para niños</h2>
+                <p>Los niños disfrutarán de aventuras con sus personajes favoritos en un espacio creado especialmente
+                    para ellos, sin costo adicional.</p>
+            </div>
+            <div class="kids-art" aria-hidden="true">KIDS</div>
+        </section>
 
-        <section class="subscription-faq">
+        <section class="faq feature-dark">
             <h2>Preguntas frecuentes</h2>
             <div class="faq-list">
-                <details>
-                    <summary>¿Qué es Netflix?</summary>
-                    <p>Netflix es un servicio de streaming que ofrece una amplia variedad de series, películas,
-                        títulos de anime, documentales y otros contenidos premiados en miles de dispositivos conectados
-                        a internet.</p>
-                </details>
-                <details>
-                    <summary>¿Cuánto cuesta Netflix?</summary>
-                    <p>Disfruta de Netflix en tu smartphone, tableta, Smart TV, ordenador o dispositivo de streaming,
-                        todo por una tarifa mensual fija. Planes desde 9,99&nbsp;US$ a 17,99&nbsp;US$ al mes.</p>
-                </details>
-                <details>
-                    <summary>¿Dónde puedo ver Netflix?</summary>
-                    <p>Disfruta donde quieras y cuando quieras en cualquier dispositivo conectado a internet que
-                        ofrezca la aplicación de Netflix.</p>
-                </details>
-                <details>
-                    <summary>¿Cómo cancelo?</summary>
-                    <p>Puedes cancelar tu cuenta en línea con tan solo dos clics, sin cargos por cancelación.</p>
-                </details>
-                <details>
-                    <summary>¿Qué puedo ver en Netflix?</summary>
-                    <p>Netflix dispone de una amplia biblioteca de contenido original, anime, series, documentales y
-                        largometrajes.</p>
-                </details>
-                <details>
-                    <summary>¿Es Netflix bueno para los niños?</summary>
-                    <p>Los perfiles infantiles incluyen controles parentales protegidos por PIN y contenido familiar
-                        en un espacio propio.</p>
-                </details>
+                <details><summary>¿Qué es Netflix?</summary><p>Netflix es un servicio de streaming que ofrece una gran variedad de películas, series y documentales.</p></details>
+                <details><summary>¿Cuánto cuesta Netflix?</summary><p>Disfruta Netflix en tu teléfono, tablet, Smart TV, laptop o dispositivo de streaming por una tarifa mensual fija.</p></details>
+                <details><summary>¿Dónde puedo ver Netflix?</summary><p>Ve Netflix en cualquier dispositivo conectado a internet que tenga la aplicación de Netflix, como smart TV, teléfonos, tablets y computadoras.</p></details>
+                <details><summary>¿Cómo cancelo?</summary><p>Puedes cancelar tu membresía en cualquier momento desde la sección de cuenta.</p></details>
+                <details><summary>¿Qué puedo ver en Netflix?</summary><p>Netflix ofrece películas, series, documentales y contenido original para toda la familia.</p></details>
             </div>
-            <a class="button button-large subscription-cta" href="./eligePlan.html"
-                data-gb-event="subscription_start" data-gb-location="faq">Completar la suscripción <span
-                    aria-hidden="true">›</span></a>
+            <div class="faq-cta">
+                <a class="button button-large" href="./plan.html" data-gb-event="subscription_start"
+                    data-gb-location="faq">Completar suscripción <span aria-hidden="true">›</span></a>
+            </div>
         </section>
     </main>
 
