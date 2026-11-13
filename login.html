@@ -8,6 +8,7 @@
     <title>Iniciar sesión - Netflix</title>
     <link rel="stylesheet" href="./css/index.css">
     <script type="module" src="./js/growthbook.js"></script>
+    <script type="module" src="./js/subscription.js"></script>
 </head>
 
 <body class="login-page" data-gb-page="login">
@@ -23,7 +24,8 @@
             <h1 id="login-title">Ingresa tu info para iniciar sesión</h1>
             <p class="login-subtitle">O bien, comienza con una cuenta nueva.</p>
 
-            <form class="login-form" action="./plan.html" method="get" data-gb-event="login_submit">
+            <form class="login-form" action="./confirmarCorreo.html" method="get" data-gb-event="login_submit">
+                <input type="hidden" name="plan" value="" data-login-plan>
                 <div class="login-field login-field-error">
                     <label for="login-email">Email o número de celular</label>
                     <input id="login-email" type="text" autocomplete="username"
