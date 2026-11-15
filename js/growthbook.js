@@ -7,10 +7,10 @@ import {
 const CLIENT_KEY = "sdk-myGTLTcFwAeuUer";
 const API_HOST = "https://cdn.growthbook.io";
 const INGESTOR_HOST = "https://us-east-1.gb-ingest.com";
-const EXPERIMENT_KEY = "homepage-variant";
+const EXPERIMENT_KEY = "homepage-variant_2";
 const FALLBACK_VARIANT = "a";
 const VALID_VARIANTS = new Set(["a", "b"]);
-const VARIANT_STORAGE_KEY = "netflix-ab-variant";
+const VARIANT_STORAGE_KEY = "netflix-ab-variant-v2";
 const INIT_TIMEOUT_MS = 2500;
 
 const isDevMode =
