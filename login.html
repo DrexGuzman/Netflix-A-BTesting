@@ -7,11 +7,12 @@
     <meta name="description" content="Inicia sesión en Netflix.">
     <title>Iniciar sesión - Netflix</title>
     <link rel="stylesheet" href="./css/index.css">
+    <script type="module" src="./js/growthbook.js"></script>
 </head>
 
-<body class="login-page">
+<body class="login-page" data-gb-page="login">
     <header class="login-header">
-        <a class="brand" href="./indexB.html" aria-label="Netflix">
+        <a class="brand" href="./index.html" aria-label="Netflix">
             <img src="./source/netflixLogo.svg"
                 alt="Netflix">
         </a>
@@ -22,10 +23,10 @@
             <h1 id="login-title">Ingresa tu info para iniciar sesión</h1>
             <p class="login-subtitle">O bien, comienza con una cuenta nueva.</p>
 
-            <form class="login-form" action="./plan.html" method="get">
+            <form class="login-form" action="./plan.html" method="get" data-gb-event="login_submit">
                 <div class="login-field login-field-error">
                     <label for="login-email">Email o número de celular</label>
-                    <input id="login-email" name="email" type="text" autocomplete="username"
+                    <input id="login-email" type="text" autocomplete="username"
                         aria-invalid="true" aria-describedby="login-error" required>
                 </div>
                 <p class="login-error" id="login-error" role="alert">
@@ -54,7 +55,7 @@
             <a href="https://help.netflix.com/">Centro de ayuda</a>
             <a href="https://help.netflix.com/legal/termsofuse">Términos de uso</a>
             <a href="https://help.netflix.com/legal/privacy">Privacidad</a>
-            <a href="./indexB.html">Preferencias de cookies</a>
+            <a href="./index.html">Preferencias de cookies</a>
             <a href="https://help.netflix.com/legal/corpinfo">Información empresarial</a>
         </nav>
     </footer>

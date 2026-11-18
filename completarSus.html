@@ -7,11 +7,12 @@
     <meta name="description" content="Completa tu suscripción de Netflix.">
     <title>Completar la suscripción - Netflix</title>
     <link rel="stylesheet" href="./css/index.css">
+    <script type="module" src="./js/growthbook.js"></script>
 </head>
 
-<body class="subscription-page">
+<body class="subscription-page" data-gb-page="complete">
     <header class="site-header subscription-header">
-        <a class="brand" href="./Index.html" aria-label="Netflix">
+        <a class="brand" href="./index.html" aria-label="Netflix">
             <img src="./source/netflixLogo.svg"
                 alt="Netflix">
         </a>
@@ -23,7 +24,7 @@
                     <option value="en-CR">English</option>
                 </select>
             </label>
-            <a class="button button-small" href="./Index.html">Cerrar sesión</a>
+            <a class="button button-small" href="./index.html">Cerrar sesión</a>
         </nav>
     </header>
 
@@ -33,7 +34,8 @@
             <div class="subscription-hero-content">
                 <h1>Películas y series sin límites y mucho más</h1>
                 <p>A partir de 9,99&nbsp;US$. Cancela cuando quieras.</p>
-                <a class="button button-large" href="./eligePlan.html">Completar la suscripción <span
+                <a class="button button-large" href="./eligePlan.html"
+                    data-gb-event="subscription_start" data-gb-location="hero">Completar la suscripción <span
                         aria-hidden="true">›</span></a>
             </div>
         </section>
@@ -115,7 +117,8 @@
                         en un espacio propio.</p>
                 </details>
             </div>
-            <a class="button button-large subscription-cta" href="./eligePlan.html">Completar la suscripción <span
+            <a class="button button-large subscription-cta" href="./eligePlan.html"
+                data-gb-event="subscription_start" data-gb-location="faq">Completar la suscripción <span
                     aria-hidden="true">›</span></a>
         </section>
     </main>
@@ -125,12 +128,12 @@
         <div class="footer-links">
             <a href="https://help.netflix.com/support/412">Preguntas frecuentes</a>
             <a href="https://help.netflix.com/">Centro de ayuda</a>
-            <a href="./Index.html">Cuenta</a>
+            <a href="./index.html">Cuenta</a>
             <a href="https://media.netflix.com/">Zona de prensa</a>
             <a href="https://jobs.netflix.com/jobs">Empleo</a>
             <a href="https://help.netflix.com/legal/termsofuse">Términos de uso</a>
             <a href="https://help.netflix.com/legal/privacy">Privacidad</a>
-            <a href="./Index.html">Preferencias de cookies</a>
+            <a href="./index.html">Preferencias de cookies</a>
             <a href="https://help.netflix.com/contactus">Contáctanos</a>
         </div>
         <label class="language-picker footer-language" for="footer-subscription-language">
