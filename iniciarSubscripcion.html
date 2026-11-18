@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Inicia tu suscripción de Netflix.">
+    <title>Iniciar suscripción - Netflix</title>
+    <link rel="stylesheet" href="./css/index.css">
+    <script type="module" src="./js/growthbook.js"></script>
+    <script type="module" src="./js/subscription.js"></script>
+</head>
+
+<body class="payment-page" data-gb-page="payment">
+    <header class="payment-header">
+        <a class="brand" href="./index.html" aria-label="Netflix">
+            <img src="./source/netflixLogo.svg"
+                alt="Netflix">
+        </a>
+        <a class="payment-signout" href="./index.html">Cerrar sesión</a>
+    </header>
+
+    <main class="payment-main">
+        <a class="payment-back" href="./eligePlan.html?plan=premium" data-plan-link>
+            <span aria-hidden="true">‹</span> cambiar plan
+        </a>
+
+        <p class="payment-step">Paso <strong>3</strong> de <strong>3</strong></p>
+
+        <form id="payment-form" class="payment-form" action="./confirmacion.html" method="get"
+            data-gb-event="payment_submit" data-gb-location="payment">
+            <input type="hidden" name="plan" value="premium" data-plan-value>
+
+            <div class="payment-plan">
+                <div class="payment-plan-details">
+                    <p class="payment-plan-price"><span data-plan-price>17,99</span> US$ al mes <span
+                            class="payment-plan-tax">(antes de impuestos)</span></p>
+                    <p class="payment-plan-name" data-plan-name>Premium</p>
+                </div>
+                <a class="payment-plan-change" href="./eligePlan.html?plan=premium" data-plan-link>Cambiar</a>
+            </div>
+
+            <p class="payment-note">Tus pagos se van a procesar de forma internacional. Podrían aplicarse comisiones
+                bancarias adicionales.</p>
+
+            <p class="payment-terms">Al marcar la siguiente casilla, aceptas nuestros <a
+                    href="https://help.netflix.com/legal/termsofuse">Términos de uso</a>, reconoces nuestra <a
+                    href="https://help.netflix.com/legal/privacy">Declaración de privacidad</a> y admites que ya has
+                cumplido los 18. Netflix dará por hecho automáticamente que sigue en vigor y te cobrará la cuota de
+                suscripción mensual (actual: <span data-plan-price>17,99</span> US$ (antes de impuestos)) a través de tu
+                método de pago. Puedes cancelar tu suscripción cuando quieras para evitar futuros cobros.</p>
+
+            <label class="payment-accept" for="payment-accept">
+                <input id="payment-accept" type="checkbox" required>
+                <span>Acepto</span>
+            </label>
+
+            <button class="button payment-submit" type="submit">Iniciar suscripción</button>
+            <p class="payment-status sr-only" role="status" aria-live="polite"></p>
+        </form>
+    </main>
+</body>
+
+</html>

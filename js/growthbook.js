@@ -7,9 +7,10 @@ import {
 const CLIENT_KEY = "sdk-myGTLTcFwAeuUer";
 const API_HOST = "https://cdn.growthbook.io";
 const INGESTOR_HOST = "https://us-east-1.gb-ingest.com";
-const EXPERIMENT_KEY = "homepage-variant";
+const EXPERIMENT_KEY = "homepage-variant_2";
 const FALLBACK_VARIANT = "a";
 const VALID_VARIANTS = new Set(["a", "b"]);
+const VARIANT_STORAGE_KEY = "netflix-ab-variant-v2";
 const INIT_TIMEOUT_MS = 2500;
 
 const isDevMode =
@@ -39,6 +40,7 @@ const pageViewEvents = {
     complete: "subscription_landing_view",
     plan: "plan_step_view",
     choose: "plans_view",
+    payment: "payment_view",
     login: "login_view",
     success: "subscription_complete"
 };
@@ -62,6 +64,27 @@ const ready = gb
         return FALLBACK_VARIANT;
     });
 
+function readStoredVariant() {
+    try {
+        return localStorage.getItem(VARIANT_STORAGE_KEY);
+    } catch {
+        return null;
+    }
+}
+
+function applyStoredVariantLayout() {
+    if (page !== "complete") {
+        return;
+    }
+
+    const planSection = document.querySelector("#complete-plan-comparison");
+    if (!planSection) {
+        return;
+    }
+
+    planSection.hidden = readStoredVariant() !== "b";
+}
+
 function track(eventName, properties = {}) {
     const cleanProperties = Object.fromEntries(
         Object.entries(properties).filter(
@@ -84,6 +107,11 @@ function renderVariant(variant) {
 
     content.replaceChildren(template.content.cloneNode(true));
     document.body.dataset.abVariant = variant;
+
+    try {
+        localStorage.setItem(VARIANT_STORAGE_KEY, variant);
+    } catch {
+    }
 }
 
 function attachTracking() {
@@ -100,9 +128,9 @@ function attachTracking() {
                 location: form.dataset.gbLocation
             };
 
-            if (form.dataset.gbEvent === "plan_select") {
-                properties.plan =
-                    new FormData(form).get("plan") || "premium";
+            const formPlan = new FormData(form).get("plan");
+            if (formPlan) {
+                properties.plan = formPlan;
             }
 
             track(form.dataset.gbEvent, properties);
@@ -129,6 +157,8 @@ function attachTracking() {
 }
 
 async function main() {
+    applyStoredVariantLayout();
+
     let variant = FALLBACK_VARIANT;
 
     try {
